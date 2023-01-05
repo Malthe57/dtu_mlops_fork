@@ -134,6 +134,7 @@ for epoch in range(epochs):
         print("\tEpoch", epoch + 1, "complete!", "\tAverage Loss: ", overall_loss / (batch_idx*batch_size))    
 print("Finish!!")
 
+
 # Generate reconstructions
 model.eval()
 with torch.no_grad():
