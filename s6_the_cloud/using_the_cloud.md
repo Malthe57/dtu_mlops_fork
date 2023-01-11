@@ -102,10 +102,10 @@ We are now going to start actually using the cloud.
       command for doing it should look something like this:
 
       ```bash
-      gcloud compute instances create %INSTANCE_NAME% \
-      --zone=%ZONE%
-      --image-family=<image-family>
-      --image-project=deeplearning-platform-release
+      gcloud compute instances create <instance_name> \
+        --zone=<zone> \
+        --image-family=<image-family> \
+        --image-project=deeplearning-platform-release \
       ```
 
       Hint: you can find relevant image families
@@ -119,7 +119,7 @@ We are now going to start actually using the cloud.
       </p>
 
 7. Finally, everything that you have done locally can also be achieved through the web
-   terminal, which of cause comes pre-installed with the `gcloud` command etc.
+   terminal, which of course comes pre-installed with the `gcloud` command etc.
    <p align="center">
      <img src="../figures/gcp_terminal.png" width="800" >
    </p>
@@ -323,8 +323,8 @@ parts of our pipeline.
 
       ```bash
       gcloud compute instances create <instance-name> \
-        --zone europe-west1-b
-        --image-family=pytorch-latest-cpu
+        --zone europe-west1-b \
+        --image-family=pytorch-latest-cpu \
         --image-project=deeplearning-platform-release
       ```
 
@@ -332,11 +332,11 @@ parts of our pipeline.
 
       ```bash
       gcloud compute instances create <instance-name> \
-        --zone europe-west4-a
-        --image-family=pytorch-latest-gpu
-        --image-project=deeplearning-platform-release
-        --accelerator="type=nvidia-tesla-v100,count=1"
-        --metadata="install-nvidia-driver=True"
+        --zone europe-west4-a \
+        --image-family=pytorch-latest-gpu \
+        --image-project=deeplearning-platform-release \
+        --accelerator="type=nvidia-tesla-v100,count=1" \
+        --metadata="install-nvidia-driver=True" \
         --maintenance-policy TERMINATE
       ```
 
