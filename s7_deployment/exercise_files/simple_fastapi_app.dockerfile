@@ -1,6 +1,6 @@
 FROM python:3.9-slim
 
-EXPOSE 8501
+EXPOSE $PORT
 
 WORKDIR /app
 
